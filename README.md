@@ -39,7 +39,6 @@ Alguns dos benefícios dessa solução são:
   -	Minimizar o custo dos transportadores, que podem despriorizar a circulação em áreas com menor probabilidade de demandar transportes, reduzindo o gasto de combustível sem receita associada
   -	Maximizar o total de clientes satisfeitos, reduzindo o tempo de espera por um transportador em função da maior disponibilidade de transportadores nas áreas que mais geram transportes
 
-
 ## ETAPAS DO TRABALHO
 O execução desse trabalho envolveu as seguintes etapas:
   - O estudo de ferramentas de ETL
@@ -49,4 +48,29 @@ O execução desse trabalho envolveu as seguintes etapas:
   -	Desenvolvimento de Rede Neural para previsão por regressão da probabilidade de bairros originarem transportes
   -	Execução de simulações para parametrização da Rede Neural
   -	Avaliação dos Resultados
+
+
+## SOLUÇÃO - O MODELO DE INFERÊNCIA
+
+A base histórica com as informações de um mês de transportes foi carregada e convertida, utilizando o [Pentaho](https://g.co/kgs/3B2LN7) como ferramenta de ETL, em arquivos em formato CSV (Comma Separated Values) contendo a probabilidade de cada bairro demandar corridas a cada dia e hora do mês de Janeiro/2020. Foi gerado um [arquivo para a cidade de Fortaleza](https://github.com/buleo/TCCTeste/blob/main/Corridas_Fortaleza-FINAL-Acentuado-Probabilidades-ComSemanaTeste.csv) e um [arquivo para as demais cidades](https://github.com/buleo/TCCTeste/blob/main/Corridas_Cidades_Eleitas-FINAL-Acentuado-Probabilidades-ComSemanaTeste.csv) eleitas para estudo nesse trabalho. Esses arquivos serviram como base de treino e base de testes do modelo preditivo.
+
+A fim de garantir que, tanto a base de treino como a base de testes dispusesse de registros de todas as horas e todos os dias da semana, foram considerados para teste os transportes ocorridos no período de 12 a 18 de janeiro de 2020 e para treino os demais dias.
+
+O modelo de inferência foi desenvolvido em um programa utilizando a linguagem [Python](https://www.python.org/). 
+
+Para criação da rede neural foi utilizada a biblioteca [Keras](https://keras.io/) do Python.
+Foi utilizada uma rede neural de 3 camadas.
+Como função de ativação dos neurônios da rede foi utilizada a função “Relu”.
+
+Foi utilizado o [Google Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb) para executar as simulações do modelo. 
+
+Vários otimizadores foram utilizados nas simulações sendo que os melhores resultados foram obtidos com os listados abaixo:
+  - SGD - Otimizador de Gradiente descendente com Momentum   
+  - NAdam - Otimizador que implementa o algoritmo Adam conjugado com o momentum Nesterov
+
+Clique aqui para acessar o código completo do programa em [Jupiter Notebook](https://jupyter.org/). 
+
+
+
+
 
