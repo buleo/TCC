@@ -24,3 +24,14 @@ Para realização desse trabalho foi obtida, junto a empresa [Gaudium](https://g
   -	Gerar base de informações, a partir da base disponível de transportes realizados, com a probabilidade de cada bairro, em cada cidade de partida, demandar transportes a cada dia e hora do mês de modo a servir como base de treino e base de testes do modelo preditivo a desenvolver
   -	Eleger, dentre as 1.118 cidades de partida presentes na base, quais seriam usadas nesse estudo
   -	Desenvolver Rede Neural para prever, por método de regressão, a probabilidade de cada bairro das cidades eleitas no estudo, demandar transportes a cada dia, de hora em hora
+
+## ETAPAS DO TRABALHO
+O execução desse trabalho envolveu as seguintes etapas:
+  - O estudo de ferramentas de ETL
+  -	O estudo de técnicas de Data Mining
+  -	O estudo de modelos de Machine Learning e redes neurais para previsão por regressão
+  -	O desenvolvimento de ETL para extração e transformação da base de dados do cliente em uma base de informações das probabilidades dos bairros originarem transportes
+  -	Desenvolvimento de Rede Neural para previsão por regressão da probabilidade de bairros originarem transportes
+  -	Execução de simulações para parametrização da Rede Neural
+  -	Avaliação dos Resultados
+
