@@ -2,6 +2,8 @@
 
 ## Monografia apresentada ao Departamento de Engenharia Elétrica da PUC/Rio como parte dos requisitos para a obtenção do título de Especialização em Business Intelligence
 
+Data: 31/08/2020
+
 ## Autor: Fernando Mauro **Buleo** Barbosa
 
 [Arquivo do TCC](https://github.com/buleo/TCCTeste/blob/main/BI-Master-Monografia-final%20-FMBB.pdf)
