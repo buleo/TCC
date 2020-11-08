@@ -4,4 +4,4 @@
 
 ## Autor: Fernando Mauro **Buleo** Barbosa
 
-[Documento TCC completo] (https://github.com/buleo/TCCTeste/blob/main/BI-Master-Monografia-final%20-FMBB.pdf)
+[Arquivo do TCC](https://github.com/buleo/TCCTeste/blob/main/BI-Master-Monografia-final%20-FMBB.pdf)
