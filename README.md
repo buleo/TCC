@@ -99,8 +99,9 @@ Já o indicador MAPE, por representar a distância percentual entre o valor prev
    Foram realizadas simulações com até 20.000 épocas de treinamento. No entanto, o ajuste desse parâmetro evidenciou que bastavam em torno de 250 épocas para obter os melhores resultados. 
    
    A realização de simulações com até 20.000 épocas proporcionou a observação do fenômeno de Overfitting (Super Treinamento), conforme podemos observar no gráfico abaixo. Tal gráfico representa a variação do indicador MAE em função do total de Épocas utilizadas na simulação. Nas simulações ilustradas nesse gráfico foi utilizada rede neural de 3 camadas com 160, 80 e 1 neurônio respectivamente. O otimizador utilizado foi o Adam. A cidade em questão foi Petrolina.
- 
-                     Figura 11- Overfit em rede neural de 3 camadas com 160, 80 e 1 neurônios e Otimizador Adam
+   
+   ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Overfit em rede neural de 3 camadas com 160, 80 e 1 neurônios e Otimizador Adam")
+
 •	Faixa Horária
 Na base de informações disponibilizada de transportes realizados, para as cidades eleitas nesse trabalho, 73% dos transportes ocorriam no período de 8 as 19 horas  Por conta disso, foram executadas não só simulações visando desenvolver modelos para prever a probabilidade de transportes a qualquer hora do dia, mas também modelos visando prever somente os transportes no período de 8 às 19 horas, faixa próxima ao “Horário Comercial”.
 O objetivo foi otimizar os resultados dos modelos nesse período horário (próximo ao “Horário Comercial”), sem prejuízo da relevância dos resultados. 
