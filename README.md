@@ -71,6 +71,9 @@ Vários otimizadores foram utilizados nas simulações sendo que os melhores res
 Clique [aqui](https://github.com/buleo/TCCTeste/blob/main/TCC_Gaudium_SemanaTeste_Limpo.ipynb) para acessar o código completo do programa em [Jupiter Notebook](https://jupyter.org/). 
 
 
+## RESULTADOS
+
+
 
 
 
