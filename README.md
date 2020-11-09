@@ -8,13 +8,13 @@ Data: 31/08/2020
 
 ### O texto abaixo apresenta um resumo do trabalho. Clique no link a seguir para acessar a [Monografia Completa](https://github.com/buleo/TCCTeste/blob/main/BI-Master-Monografia-final%20-FMBB.pdf).
 
-## RESUMO:
+## RESUMO
 No presente trabalho foi desenvolvido modelo preditivo visando identificar as áreas de cidades com maior probabilidade de demandarem transporte por aplicativo, a cada dia e hora. O modelo preditivo foi desenvolvido em uma rede neural e treinado para prever a probabilidade de transportes serem demandados em 3 (três) cidades brasileiras. Para o treinamento foi utilizada a base completa de 1 (um) mês de 2020 de transportes realizados por aplicativo. 
 
 Os melhores resultados obtidos indicaram que, em 84% dos casos, o modelo consegue prever a probabilidade de bairros demandarem transporte com uma distância de até 3 posições em relação a ordem (“ranking”) real de bairros, quando consideramos os 5 que mais demandam transportes. Expandindo a análise para os 10 bairros que mais solicitam transportes, foi verificado que, em 77% dos casos, o modelo consegue prever a probabilidade de bairros demandarem transportes com uma distância de até 3 posições em relação ao “ranking” real.
 
 
-## ABSTRACT:
+## ABSTRACT
 In this work, a predictive model was developed to identify the areas of cities most likely to require transportation, every day and hour. The predictive model was developed in a neural network and trained to predict the likelihood of a demand for transport in 3 (three) Brazilian cities. For the training of the model, the complete base of transports performed in 1 (one) month of the year 2020 of a transport application was used.
 
 The best results obtained indicated that, in 84% of the cases, the model is able to predict the probability of neighborhoods requiring transport with a distance of up to 3 positions in relation to the real "ranking", when we consider the 5 neighborhoods that most originate races. Expanding the analysis to the 10 neighborhoods that demand the most transport, It was found that, in 77% of the cases, the model is able to predict the probability of neighborhoods requiring transport with a distance of up to 3 positions in relation to the real "ranking".
@@ -71,7 +71,63 @@ Vários otimizadores foram utilizados nas simulações sendo que os melhores res
 Clique [aqui](https://github.com/buleo/TCCTeste/blob/main/TCC_Gaudium_SemanaTeste_Limpo.ipynb) para acessar o código completo do programa em [Jupiter Notebook](https://jupyter.org/). 
 
 
-## RESULTADOS
+## SIMULAÇÕES
+
+Foram realizadas, ao todo, 127 simulações desse modelo. Os parêmetros cuja configuração foi variada nessas simulações são os seguintes:
+- Número de Camadas da Rede Neural
+Do total de 127 simulações, 116 foram realizadas com redes neurais de 3 camadas. Após atingir o melhor modelo com 3 camadas, algumas simulações foram realizadas com 4 ou 5 camadas (11 simulações no total). Os resultados não apresentaram ganhos significativos, portanto as melhores soluções mantiveram somente 3 camadas.
+•	Quantidade de Neurônios das Camadas Escondidas
+As simulações, em geral, seguiram a heurística mencionada na seção 3.3.4 quanto a quantidade de neurônios das camadas escondidas.
+•	Otimizador
+Foram realizadas simulações utilizando todos os otimizadores mencionados na seção 3.3.4. Os melhores resultados, contudo, foram obtidos com os otimizadores Nadam e SGD.
+•	Indicador de Perda
+Foram realizadas simulações utilizando os indicadores MAE, MSE e MAPE (descritos na seção 3.3.4), associados ao algoritmo otimizador. Observou-se, contudo, que a maior parte dos valores a serem previstos eram muito pequenos. Considerando as bases de informações das cidades eleitas, 88% dos registros (bairros por horário) apresentavam probabilidade inferior a 5% (0,05). Isso está demonstrado na Tabela 6. Nesta tabela, a coluna “Faixas de Probabilidades” apresenta o limite superior e inferior da faixa de probabilidades dos registros consolidados nessa linha, a coluna “Linhas da Base de Informações” indica a quantidade de registros da base de informações cuja probabilidade está contida naquela faixa, onde cada registro representa a probabilidade de um bairro demandar corridas em uma data e hora. Por último, a coluna “%” indica a representatividade percentual do total de registros naquela faixa (coluna “Faixa de Probabilidades”) em relação ao total de registros da base.
+Tabela 6- Distribuição do Total de Linhas da Base de Informações por Faixa de Probabilidades nas Cidades Eleitas
+  
+Assim, os erros medidos pelos indicadores MAE e MSE eram muito pequenos, levando a resultados inferiores quando esses foram utilizados no modelo preditivo.
+Já o indicador MAPE, por representar a distância percentual entre o valor previsto e o real, gerou valores mais significativos. Por exemplo, para um valor esperado de 0,3 e um valor estimado de 0,39, o indicador MAE gera como resultado somente 0,09 enquanto que o MAPE apresenta como resultado 30%. Por esse motivo, entende-se que os melhores resultados das simulações foram obtidos quando os otimizadores foram associados com o uso do indicador MAPE.
+•	Épocas de Treinamento
+Foram realizadas simulações com até 20.000 épocas de treinamento. No entanto, o ajuste desse parâmetro evidenciou que bastavam em torno de 250 épocas para obter os melhores resultados. 
+A realização de simulações com até 20.000 épocas proporcionou a observação do fenômeno de Overfitting (Super Treinamento), conforme podemos observar no gráfico da Figura 11.
+Tal gráfico representa a variação do indicador MAE em função do total de Épocas utilizadas na simulação. Nas simulações ilustradas nesse gráfico foi utilizada rede neural de 3 camadas com 160, 80 e 1 neurônio respectivamente. O otimizador utilizado foi o Adam. A cidade em questão foi Petrolina.
+ 
+                     Figura 11- Overfit em rede neural de 3 camadas com 160, 80 e 1 neurônios e Otimizador Adam
+•	Faixa Horária
+Na base de informações disponibilizada de transportes realizados, para as cidades eleitas nesse trabalho, 73% dos transportes ocorriam no período de 8 as 19 horas  Por conta disso, foram executadas não só simulações visando desenvolver modelos para prever a probabilidade de transportes a qualquer hora do dia, mas também modelos visando prever somente os transportes no período de 8 às 19 horas, faixa próxima ao “Horário Comercial”.
+O objetivo foi otimizar os resultados dos modelos nesse período horário (próximo ao “Horário Comercial”), sem prejuízo da relevância dos resultados. 
+A Tabela 7 apresenta a quantidade de transportes realizados a cada hora de partida para as cidades “eleitas” mencionadas na seção 3.2.5, bem como a representatividade percentual da quantidade de registros sobre o total. Já a Figura 12 apresenta, graficamente, a distribuição do total de transportes realizados por hora para cada uma das cidades eleitas.
+
+Tabela 7- Transportes Realizados por Hora de Partida para as Cidades Eleitas
+Hora de Partida	 Transportes 	%	% Grupos
+0	       2.849 	1,13%	14,29%
+1	       1.883 	0,75%	
+2	       1.364 	0,54%	
+3	       1.150 	0,46%	
+4	       1.200 	0,48%	
+5	       1.953 	0,78%	
+6	       8.764 	3,48%	
+7	     16.799 	6,68%	
+8	     16.474 	6,55%	73,42%
+9	     15.369 	6,11%	
+10	     13.966 	5,55%	
+11	     13.919 	5,53%	
+12	     14.845 	5,90%	
+13	     15.811 	6,28%	
+14	     15.824 	6,29%	
+15	     15.755 	6,26%	
+16	     15.824 	6,29%	
+17	     16.624 	6,61%	
+18	     16.537 	6,57%	
+19	     13.809 	5,49%	
+20	     10.549 	4,19%	12,28%
+21	       8.799 	3,50%	
+22	       6.774 	2,69%	
+23	       4.787 	1,90%	
+Total	   251.628 	100,00%	 
+
+  
+Figura 12- Distribuição de Transportes Realizados por Faixa Horária
+
 
 
 
