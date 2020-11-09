@@ -136,8 +136,25 @@ A tabela abaixo apresenta os parâmetros da simulação na qual foram obtidos os
 
 O gráfico abaixo apresenta, para cada elemento da base de teste, a distância entre a probabilidade real e a estimada pelo modelo nessa simulação. 
 
+![ResultadoTodosOsHorarios](https://github.com/buleo/TCCTeste/blob/main/NadamFortalezaTodosOsHorarios-Grafico.png)
 
+A tabela abaixo apresenta os parâmetros da simulação na qual foram obtidos os melhores resultados utilizando o Otimizador Nadam, na cidade de Fortaleza, considerando transportes iniciados entre 8 e 19 horas (Horário "Comercial"). Apresenta, também, os resultados dos indicadores de performance obtidos nessa simulação. 
 
+| Nome do Parâmetro | Valor |
+| --- | --- |
+| Faixa Horária | 8 a 19 horas |
+| Algoritmo Otimizador | Nadam |
+| Parâmetros do Algoritmo Otimizador	| Default 	|
+| Rede Neural	| 3 camadas densamente conectadas com 314, 157 e 1 neurônio respectivamente |
+| Total de Épocas | 350 |
+| Indicador de Perda | MAPE |
+| Resultados	| RMSE:		0,9447 |
+| | MSE:		0,8924 |
+| | MAE:		0,5397 |
+| | MAPE:		34,20235825 |
 
+O gráfico abaixo apresenta, para cada elemento da base de teste, a distância entre a probabilidade real e a estimada pelo modelo nessa simulação. 
+
+![ResultadoTodosOsHorarios](https://github.com/buleo/TCCTeste/blob/main/NadamFortalezaHorarioComercial-Grafico.png)
 
 
