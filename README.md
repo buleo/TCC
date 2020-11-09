@@ -73,7 +73,7 @@ Clique [aqui](https://github.com/buleo/TCCTeste/blob/main/TCC_Gaudium_SemanaTest
 
 ## SIMULAÇÕES
 
-Foram realizadas, ao todo, 127 simulações desse modelo. Os parêmetros cuja configuração foi variada nessas simulações são os seguintes:
+Foram realizadas, ao todo, 127 simulações desse modelo. Os parâmetros cuja configuração foi variada nessas simulações são os seguintes:
 
 - Número de Camadas da Rede Neural
 
@@ -113,6 +113,28 @@ Já o indicador MAPE, por representar a distância percentual entre o valor prev
    ![FaixaHoraria](https://github.com/buleo/TCCTeste/blob/main/FaixaHoraria-Gr%C3%A1fico.png "Distribuição do total de transportes realizados por hora para cada uma das cidades eleitas")
 
 
+## RESULTADOS
+
+Foram realizadas simulações para as cidades de Fortaleza, Patos de Minas e Petrolina. Os melhores resultados foram obtidos para Fortaleza e estão sumarizados nessa seção. A relação completa de resultados de Fortaleza, bem como, os resultados das demais cidades pode ser obtida diretamente na [monografia](https://github.com/buleo/TCCTeste/blob/main/BI-Master-Monografia-final%20-FMBB.pdf)
+
+### Fortaleza - Melhores Resultados
+
+A tabela abaixo apresenta os parâmetros da simulação na qual foram obtidos os melhores resultados utilizando o Otimizador Nadam, na cidade de Fortaleza, considerando transportes iniciados em qualquer hora do dia. Apresenta, também, os resultados dos indicadores de performance obtidos nessa simulação. 
+
+| Nome do Parâmetro | Valor |
+| --- | --- |
+| Faixa Horária | 0 a 23 horas |
+| Algoritmo Otimizador | Nadam |
+| Parâmetros do Algoritmo Otimizador	| Default 	|
+| Rede Neural	| 3 camadas densamente conectadas com 314, 157 e 1 neurônio respectivamente |
+| Total de Épocas | 10 |
+| Indicador de Perda | MAPE |
+| Resultados	| RMSE:		1,6736 |
+| | MSE:		2,8009 |
+| | MAE:		0,797523916 |
+| | MAPE:		31,68181038 |
+
+O gráfico abaixo apresenta, para cada elemento da base de teste, a distância entre a probabilidade real e a estimada pelo modelo nessa simulação. 
 
 
 
