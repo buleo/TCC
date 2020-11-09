@@ -100,43 +100,19 @@ Já o indicador MAPE, por representar a distância percentual entre o valor prev
    
    A realização de simulações com até 20.000 épocas proporcionou a observação do fenômeno de Overfitting (Super Treinamento), conforme podemos observar no gráfico abaixo. Tal gráfico representa a variação do indicador MAE em função do total de Épocas utilizadas na simulação. Nas simulações ilustradas nesse gráfico foi utilizada rede neural de 3 camadas com 160, 80 e 1 neurônio respectivamente. O otimizador utilizado foi o Adam. A cidade em questão foi Petrolina.
    
-   ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Overfit em rede neural de 3 camadas com 160, 80 e 1 neurônios e Otimizador Adam")
+   ![Overfit](https://github.com/buleo/TCCTeste/blob/main/Overfit-Gr%C3%A1fico.png "Overfit em rede neural de 3 camadas com 160, 80 e 1 neurônios e Otimizador Adam")
 
-•	Faixa Horária
-Na base de informações disponibilizada de transportes realizados, para as cidades eleitas nesse trabalho, 73% dos transportes ocorriam no período de 8 as 19 horas  Por conta disso, foram executadas não só simulações visando desenvolver modelos para prever a probabilidade de transportes a qualquer hora do dia, mas também modelos visando prever somente os transportes no período de 8 às 19 horas, faixa próxima ao “Horário Comercial”.
-O objetivo foi otimizar os resultados dos modelos nesse período horário (próximo ao “Horário Comercial”), sem prejuízo da relevância dos resultados. 
-A Tabela 7 apresenta a quantidade de transportes realizados a cada hora de partida para as cidades “eleitas” mencionadas na seção 3.2.5, bem como a representatividade percentual da quantidade de registros sobre o total. Já a Figura 12 apresenta, graficamente, a distribuição do total de transportes realizados por hora para cada uma das cidades eleitas.
+-	Faixa Horária
+   
+   Na base de informações disponibilizada de transportes realizados, para as cidades eleitas nesse trabalho, 73% dos transportes ocorriam no período de 8 as 19 horas.  Por conta disso, foram executadas não só simulações visando desenvolver modelos para prever a probabilidade de transportes a qualquer hora do dia, mas também simulações visando prever somente os transportes no período de 8 às 19 horas, faixa próxima ao “Horário Comercial”.
 
-Tabela 7- Transportes Realizados por Hora de Partida para as Cidades Eleitas
-Hora de Partida	 Transportes 	%	% Grupos
-0	       2.849 	1,13%	14,29%
-1	       1.883 	0,75%	
-2	       1.364 	0,54%	
-3	       1.150 	0,46%	
-4	       1.200 	0,48%	
-5	       1.953 	0,78%	
-6	       8.764 	3,48%	
-7	     16.799 	6,68%	
-8	     16.474 	6,55%	73,42%
-9	     15.369 	6,11%	
-10	     13.966 	5,55%	
-11	     13.919 	5,53%	
-12	     14.845 	5,90%	
-13	     15.811 	6,28%	
-14	     15.824 	6,29%	
-15	     15.755 	6,26%	
-16	     15.824 	6,29%	
-17	     16.624 	6,61%	
-18	     16.537 	6,57%	
-19	     13.809 	5,49%	
-20	     10.549 	4,19%	12,28%
-21	       8.799 	3,50%	
-22	       6.774 	2,69%	
-23	       4.787 	1,90%	
-Total	   251.628 	100,00%	 
+   O objetivo foi otimizar os resultados dos modelos nesse período horário (próximo ao “Horário Comercial”), sem prejuízo da relevância dos resultados dado que esse período corresponde a 73% dos transportes. 
 
-  
-Figura 12- Distribuição de Transportes Realizados por Faixa Horária
+   A figura abaixo apresenta a distribuição do total de transportes realizados por hora para cada uma das cidades eleitas.
+
+   ![FaixaHoraria](https://github.com/buleo/TCCTeste/blob/main/FaixaHoraria-Gr%C3%A1fico.png "Distribuição do total de transportes realizados por hora para cada uma das cidades eleitas")
+
+
 
 
 
