@@ -158,3 +158,75 @@ O gráfico abaixo apresenta, para cada elemento da base de teste, a distância e
 ![ResultadoTodosOsHorarios](https://github.com/buleo/TCCTeste/blob/main/NadamFortalezaHorarioComercial-Grafico.png)
 
 
+### Fortaleza - Análise do “Ranking” de Bairros com Maior Probabilidade de Demandar Transporte (Real x Estimado)
+
+Os melhores modelos simulados apresentaram MAPE de 31,68%. Ou seja, as probabilidades estimadas distam, em média, da ordem de 31,68% das probabilidades reais. Independentemente dessa distância, a questão que cabe ser respondida para indicar a utilidade dos modelos é: as probabilidades previstas são capazes de indicar os bairros com maior probabilidade de originar transportes, em linha com o “ranking real” de bairros com maior probabilidade de originar transportes?
+Para responder essa pergunta os bairros foram classificados em ordem decrescente de probabilidade real e prevista, na base de teste, para cada dia e hora cheia. Foi estabelecido o “ranking” para cada dia e hora cheia, de modo que o bairro com maior probabilidade recebeu o número 1 (primeiro), o bairro com segunda maior probabilidade recebeu o número 2 (segundo) e assim por diante. 
+De modo a ilustrar o realizado, a Tabela 18 apresenta, como exemplo, o “ranking” para Fortaleza no dia 15 para transportes iniciados na faixa de 7 horas da manhã para as probabilidades reais da base de testes.
+Tabela 18- Ordem (“Ranking”) dos Bairros com maior Probabilidade (real) de Solicitarem Transporte em Fortaleza, em 15/Janeiro às 7:00hs
+ 
+
+Já a Tabela 19 apresenta, como exemplo, o “ranking” para Fortaleza no dia 15 para transportes iniciados na faixa de 7 horas da manhã para as probabilidades estimadas pelo modelo para a base de testes.
+Tabela 19- Ordem (“Ranking”) dos Bairros com maior Probabilidade (estimada) de Solicitarem Transporte em Fortaleza, em 15/Janeiro às 7:00hs
+ 
+
+Em seguida, foi realizada a correspondência dos “rankings” associados a probabilidade real e a probabilidade estimada para cada bairro, dia e horário, criando-se o indicador de “Distância” correspondendo a fórmula abaixo:
+
+Distância= |〖Ranking〗_real-〖Ranking〗_estimada |
+
+O resultado da criação do indicador de “Distância” está ilustrado na Tabela 20, a qual apresenta o resultado desse indicador para Fortaleza no dia 15 para transportes iniciados na faixa de 7 horas da manhã.
+Tabela 20- Distância entre Ranking Real e Estimado dos Bairros com maior Probabilidade  de Solicitarem Transporte em Fortaleza, em 15/Janeiro às 7:00hs
+ 
+Como podemos observar na Tabela 20, para o bairro Dionisio Torres, a Distância calculada foi 3 pois esse bairro tem a 7ª maior probabilidade de originar transportes na base real (ranking 7) enquanto que, na probabilidade estimada, foi a 10ª maior (ranking 10). Já para os bairros Aldeota, Conjunto Prefeito José Walter, Meireles e Papicu, a Distância foi 0 pois esses bairros tiveram o mesmo ranking para probabilidades reais e probabilidades estimadas de originarem transportes.
+A análise dessas distâncias e o resultado consolidado encontra-se detalhado nas seções a seguir.
+	Cidade: Fortaleza
+Para a simulação com o otimizador Nadam, todas as horas do dia, descrito na seção 4.2.2.1, a distribuição por faixas de distância referente aos 10 Bairros com maior probabilidade real de originar transportes em relação aos ranking estimado é o apresentado na Tabela 21.
+
+Tabela 21- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 10 Primeiros Bairros do Ranking
+ 
+Ou seja:
+	21% dos bairros foram previstos na posição correta do ranking (Distância 0)
+	66% dos bairros tem distância de até 3 posições em relação ao ranking real
+	74% dos bairros tem distância de até 5 posições em relação ao ranking real 
+
+Se considerarmos somente os 5 bairros com maior probabilidade real de originar transportes, a distribuição por faixas de distância é a apresentada na Tabela 22. 
+
+Tabela 22- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 5 Primeiros Bairros do Ranking
+ 
+Ou seja:
+	31% dos bairros foram previstos na posição correta do ranking (Distância 0)
+	80% dos bairros tem distância de até 3 posições em relação ao ranking real
+	85% dos bairros tem distância de até 5 posições em relação ao ranking real 
+
+Analisando um ranking maior, ou seja, os 20 bairros com maior probabilidade real de originar transportes, observamos também bons resultados quanto a distância em relação ao ranking estimado, como demonstrado na Tabela 23. 
+Tabela 23- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 20 Primeiros Bairros do Ranking
+ 
+Ou seja:
+	56% dos bairros tem distância de até 5 posições em relação ao ranking real 
+
+Já para a simulação com o otimizador Nadam, somente no período de 8hs às 19hs, descrito na seção 4.2.2.2, a distribuição por faixas de distância referente aos 10 Bairros com maior probabilidade real de originar transportes em relação aos ranking estimado é o apresentado na Tabela 24.
+
+Tabela 24- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 10 Primeiros Bairros do Ranking (Horário "Comercial")
+ 
+Ou seja:
+	26% dos bairros foram previstos na posição correta do ranking (Distância 0)
+	70% dos bairros tem distância de até 3 posições em relação ao ranking real
+	77% dos bairros tem distância de até 5 posições em relação ao ranking real 
+
+Se considerarmos somente os 5 bairros com maior probabilidade real de originar transportes, a distribuição por faixas de distância é a apresentada na Tabela 25. 
+
+Tabela 25- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 5 Primeiros Bairros do Ranking (Horário "Comercial")
+ 
+Ou seja:
+	39% dos bairros foram previstos na posição correta do ranking (Distância 0)
+	84% dos bairros tem distância de até 3 posições em relação ao ranking real
+	86% dos bairros tem distância de até 5 posições em relação ao ranking real 
+
+Analisando um ranking maior, ou seja, os 20 bairros com maior probabilidade real de originar transportes, observamos também bons resultados quanto a distância em relação ao ranking estimado, como demonstrado na Tabela 26. 
+Tabela 26- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 20 Primeiros Bairros do Ranking (Horário "Comercial")
+ 
+Ou seja:
+	58% dos bairros tem distância de até 5 posições em relação ao ranking real 
+
+
+
