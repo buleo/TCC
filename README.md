@@ -74,22 +74,31 @@ Clique [aqui](https://github.com/buleo/TCCTeste/blob/main/TCC_Gaudium_SemanaTest
 ## SIMULAÇÕES
 
 Foram realizadas, ao todo, 127 simulações desse modelo. Os parêmetros cuja configuração foi variada nessas simulações são os seguintes:
+
 - Número de Camadas da Rede Neural
-Do total de 127 simulações, 116 foram realizadas com redes neurais de 3 camadas. Após atingir o melhor modelo com 3 camadas, algumas simulações foram realizadas com 4 ou 5 camadas (11 simulações no total). Os resultados não apresentaram ganhos significativos, portanto as melhores soluções mantiveram somente 3 camadas.
-•	Quantidade de Neurônios das Camadas Escondidas
-As simulações, em geral, seguiram a heurística mencionada na seção 3.3.4 quanto a quantidade de neurônios das camadas escondidas.
-•	Otimizador
-Foram realizadas simulações utilizando todos os otimizadores mencionados na seção 3.3.4. Os melhores resultados, contudo, foram obtidos com os otimizadores Nadam e SGD.
-•	Indicador de Perda
-Foram realizadas simulações utilizando os indicadores MAE, MSE e MAPE (descritos na seção 3.3.4), associados ao algoritmo otimizador. Observou-se, contudo, que a maior parte dos valores a serem previstos eram muito pequenos. Considerando as bases de informações das cidades eleitas, 88% dos registros (bairros por horário) apresentavam probabilidade inferior a 5% (0,05). Isso está demonstrado na Tabela 6. Nesta tabela, a coluna “Faixas de Probabilidades” apresenta o limite superior e inferior da faixa de probabilidades dos registros consolidados nessa linha, a coluna “Linhas da Base de Informações” indica a quantidade de registros da base de informações cuja probabilidade está contida naquela faixa, onde cada registro representa a probabilidade de um bairro demandar corridas em uma data e hora. Por último, a coluna “%” indica a representatividade percentual do total de registros naquela faixa (coluna “Faixa de Probabilidades”) em relação ao total de registros da base.
-Tabela 6- Distribuição do Total de Linhas da Base de Informações por Faixa de Probabilidades nas Cidades Eleitas
+
+   Do total de 127 simulações, 116 foram realizadas com redes neurais de 3 camadas. Após atingir o melhor modelo com 3 camadas, algumas simulações foram realizadas com 4 ou 5 camadas (11 simulações no total). Os resultados não apresentaram ganhos significativos, portanto as melhores soluções mantiveram somente 3 camadas.
+   
+-	Quantidade de Neurônios das Camadas Escondidas
+
+   As simulações, em geral, seguiram a heurística mencionada na seção 3.3.4 da [monografia](https://github.com/buleo/TCCTeste/blob/main/BI-Master-Monografia-final%20-FMBB.pdf) quanto a quantidade de neurônios das camadas escondidas.
+   
+-	Otimizador
+
+   Foram realizadas simulações utilizando os otimizadores _[SGD](https://keras.io/api/optimizers/sgd/), [RMSPROP](https://keras.io/api/optimizers/rmsprop/), [Adam](https://keras.io/api/optimizers/adam/), [Nadam](https://keras.io/api/optimizers/nadam/), [Adamax](https://keras.io/api/optimizers/adamax/), [Adagrad](https://keras.io/api/optimizers/adagrad/) e [Adadelta](https://keras.io/api/optimizers/adadelta/)_. Os melhores resultados, contudo, foram obtidos com os otimizadores _**Nadam e SGD**_.
+   
+-	Indicador de Perda
+
+   Foram realizadas simulações utilizando os indicadores MAE, MSE e MAPE, associados ao algoritmo otimizador. Observou-se, contudo, que a maior parte dos valores a serem previstos eram muito pequenos. Considerando as bases de informações das cidades eleitas, 88% dos registros (bairros por horário) apresentavam probabilidade inferior a 5% (0,05). 
   
-Assim, os erros medidos pelos indicadores MAE e MSE eram muito pequenos, levando a resultados inferiores quando esses foram utilizados no modelo preditivo.
-Já o indicador MAPE, por representar a distância percentual entre o valor previsto e o real, gerou valores mais significativos. Por exemplo, para um valor esperado de 0,3 e um valor estimado de 0,39, o indicador MAE gera como resultado somente 0,09 enquanto que o MAPE apresenta como resultado 30%. Por esse motivo, entende-se que os melhores resultados das simulações foram obtidos quando os otimizadores foram associados com o uso do indicador MAPE.
-•	Épocas de Treinamento
-Foram realizadas simulações com até 20.000 épocas de treinamento. No entanto, o ajuste desse parâmetro evidenciou que bastavam em torno de 250 épocas para obter os melhores resultados. 
-A realização de simulações com até 20.000 épocas proporcionou a observação do fenômeno de Overfitting (Super Treinamento), conforme podemos observar no gráfico da Figura 11.
-Tal gráfico representa a variação do indicador MAE em função do total de Épocas utilizadas na simulação. Nas simulações ilustradas nesse gráfico foi utilizada rede neural de 3 camadas com 160, 80 e 1 neurônio respectivamente. O otimizador utilizado foi o Adam. A cidade em questão foi Petrolina.
+   Assim, os erros medidos pelos indicadores MAE e MSE eram muito pequenos, levando a resultados menos satisfatórios quando esses foram utilizados no modelo preditivo.
+Já o indicador MAPE, por representar a distância percentual entre o valor previsto e o real, mede gera valores mais significativos proporcionando melhores resultados para esse conjunto de simulações. 
+
+-	Épocas de Treinamento
+
+   Foram realizadas simulações com até 20.000 épocas de treinamento. No entanto, o ajuste desse parâmetro evidenciou que bastavam em torno de 250 épocas para obter os melhores resultados. 
+   
+   A realização de simulações com até 20.000 épocas proporcionou a observação do fenômeno de Overfitting (Super Treinamento), conforme podemos observar no gráfico abaixo. Tal gráfico representa a variação do indicador MAE em função do total de Épocas utilizadas na simulação. Nas simulações ilustradas nesse gráfico foi utilizada rede neural de 3 camadas com 160, 80 e 1 neurônio respectivamente. O otimizador utilizado foi o Adam. A cidade em questão foi Petrolina.
  
                      Figura 11- Overfit em rede neural de 3 camadas com 160, 80 e 1 neurônios e Otimizador Adam
 •	Faixa Horária
