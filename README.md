@@ -158,7 +158,7 @@ O gráfico abaixo apresenta, para cada elemento da base de teste, a distância e
 ![ResultadoTodosOsHorarios](https://github.com/buleo/TCCTeste/blob/main/NadamFortalezaHorarioComercial-Grafico.png)
 
 
-### Análise do “Ranking” de Bairros com Maior Probabilidade de Demandar Transporte (Real x Estimado) - Fortaleza
+### Indicador de Distância entre o “Ranking” Real e Estimado de Bairros com Maior Probabilidade de Demandar Transporte
 
 Os melhores modelos simulados apresentaram MAPE de 31,68%. Ou seja, as probabilidades estimadas distam, em média, da ordem de 31,68% das probabilidades reais. Independentemente dessa distância, a questão que cabe ser respondida para indicar a utilidade dos modelos é: as probabilidades previstas são capazes de indicar os bairros com maior probabilidade de originar transportes, em linha com o “ranking real” de bairros com maior probabilidade de originar transportes?
 
@@ -214,10 +214,12 @@ O cálculo do indicador de **“Distância”** está ilustrado na Tabela a segu
 |Fortaleza	|15	|4	|7	|Papicu	|9	|9|	0|
 |Fortaleza	|15	|4	|7	|Coco|	10	|8|	2|
 
- 
-Como podemos observar na Tabela 20, para o bairro Dionisio Torres, a Distância calculada foi 3 pois esse bairro tem a 7ª maior probabilidade de originar transportes na base real (ranking 7) enquanto que, na probabilidade estimada, foi a 10ª maior (ranking 10). Já para os bairros Aldeota, Conjunto Prefeito José Walter, Meireles e Papicu, a Distância foi 0 pois esses bairros tiveram o mesmo ranking para probabilidades reais e probabilidades estimadas de originarem transportes.
-A análise dessas distâncias e o resultado consolidado encontra-se detalhado nas seções a seguir.
-	Cidade: Fortaleza
+Analisando a tabela acima observamos que:
+   - para o bairro Dionisio Torres, a Distância calculada foi 3 pois esse bairro tem a 7ª maior probabilidade de originar transportes na base real (ranking 7) enquanto que, na probabilidade estimada, foi a 10ª maior (ranking 10). 
+   - para os bairros Aldeota, Conjunto Prefeito José Walter, Meireles e Papicu, a Distância foi 0 pois esses bairros tiveram o mesmo ranking para probabilidades reais e probabilidades estimadas de originarem transportes (o modelo foi capaz de prever exatamente a posição do bairro no "ranking").
+
+### Indicador de Distância entre o “Ranking” Real e Estimado de Bairros com Maior Probabilidade de Demandar Transporte - Fortaleza
+
 Para a simulação com o otimizador Nadam, todas as horas do dia, descrito na seção 4.2.2.1, a distribuição por faixas de distância referente aos 10 Bairros com maior probabilidade real de originar transportes em relação aos ranking estimado é o apresentado na Tabela 21.
 
 Tabela 21- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 10 Primeiros Bairros do Ranking
