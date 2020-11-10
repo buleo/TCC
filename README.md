@@ -218,55 +218,119 @@ Analisando a tabela acima observamos que:
    - para o bairro Dionisio Torres, a Distância calculada foi 3 pois esse bairro tem a 7ª maior probabilidade de originar transportes na base real (ranking 7) enquanto que, na probabilidade estimada, foi a 10ª maior (ranking 10). 
    - para os bairros Aldeota, Conjunto Prefeito José Walter, Meireles e Papicu, a Distância foi 0 pois esses bairros tiveram o mesmo ranking para probabilidades reais e probabilidades estimadas de originarem transportes (o modelo foi capaz de prever exatamente a posição do bairro no "ranking").
 
-### Indicador de Distância entre o “Ranking” Real e Estimado de Bairros com Maior Probabilidade de Demandar Transporte - Fortaleza
+### Análise do Indicador de Distância entre o “Ranking” Real e Estimado de Bairros com Maior Probabilidade de Demandar Transporte - Cidade de Fortaleza
+
+#### Fortaleza / Otimizador Nadam / Todas as Horas do Dia
 
 Para a simulação com o otimizador Nadam, todas as horas do dia, a distribuição por faixas de distância referente aos 10 Bairros com maior probabilidade real de originar transportes em relação aos ranking estimado é o apresentado na Tabela abaixo.
 
-Tabela 21- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 10 Primeiros Bairros do Ranking
+|Faixa de Distâncias	|% Faixa	|% Acumulado|
+|:---|---:|---:|
+|0|	21%|	21%|
+|1 a 3|	45%|	66%|
+|4 a 5|	8%|	74%|
+|mais de 5|	26%|	100%|
  
 Ou seja:
-	21% dos bairros foram previstos na posição correta do ranking (Distância 0)
-	66% dos bairros tem distância de até 3 posições em relação ao ranking real
-	74% dos bairros tem distância de até 5 posições em relação ao ranking real 
+   - para 21% dos bairros o modelo previu a posição exata do ranking (Distância 0)
+   - para 66% dos bairros o modelo previu a posição no ranking com distância de até 3 posições em relação ao ranking real
+   - para 74% dos bairros o modelo previu a posição no ranking com distância de até 5 posições em relação ao ranking real 
 
-Se considerarmos somente os 5 bairros com maior probabilidade real de originar transportes, a distribuição por faixas de distância é a apresentada na Tabela 22. 
+Se considerarmos somente os 5 bairros com maior probabilidade real de originar transportes, a distribuição por faixas de distância é a apresentada na Tabela abaixo. 
 
-Tabela 22- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 5 Primeiros Bairros do Ranking
+|Faixa de Distâncias	|% Faixa	|% Acumulado|
+|:---|---:|---:|
+|0|	31%	|31%|
+|1 a 3|	49%	|80%|
+|4 a 5|	5%	|85%|
+|mais de 5|	|15%|	100%|
  
 Ou seja:
-	31% dos bairros foram previstos na posição correta do ranking (Distância 0)
-	80% dos bairros tem distância de até 3 posições em relação ao ranking real
-	85% dos bairros tem distância de até 5 posições em relação ao ranking real 
+   - para 31% dos bairros o modelo previu a posição exata do ranking (Distância 0)
+   - para 80% dos bairros o modelo previu a posição no ranking com distância de até 3 posições em relação ao ranking real
+   - para 85% dos bairros o modelo previu a posição no ranking com distância de até 5 posições em relação ao ranking real 
 
-Analisando um ranking maior, ou seja, os 20 bairros com maior probabilidade real de originar transportes, observamos também bons resultados quanto a distância em relação ao ranking estimado, como demonstrado na Tabela 23. 
-Tabela 23- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 20 Primeiros Bairros do Ranking
+Analisando um ranking maior, ou seja, os 20 bairros com maior probabilidade real de originar transportes, observamos também bons resultados quanto a distância em relação ao ranking estimado, como demonstrado na Tabela abaixo. 
+
+|Faixa de Distâncias	|% Faixa	|% Acumulado|
+|:---|---:|---:|
+|0|	13%	|13%|
+|1 a 3|	34%	|47%|
+|4 a 5|	9%	|56%|
+|mais de 5|	44%|	100%|
  
 Ou seja:
-	56% dos bairros tem distância de até 5 posições em relação ao ranking real 
+   - para 56% dos bairros o modelo previu a posição no ranking com distância de até 5 posições em relação ao ranking real 
 
-Já para a simulação com o otimizador Nadam, somente no período de 8hs às 19hs, descrito na seção 4.2.2.2, a distribuição por faixas de distância referente aos 10 Bairros com maior probabilidade real de originar transportes em relação aos ranking estimado é o apresentado na Tabela 24.
 
-Tabela 24- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 10 Primeiros Bairros do Ranking (Horário "Comercial")
+#### Fortaleza / Otimizador Nadam / Período de 8hs às 19hs
+
+Já para a simulação com o otimizador Nadam, somente no período de 8hs às 19hs, a distribuição por faixas de distância referente aos 10 Bairros com maior probabilidade real de originar transportes em relação aos ranking estimado é o apresentado na Tabela abaixo.
+
+|Faixa de Distâncias	|% Faixa	|% Acumulado|
+|:---|---:|---:|
+|0	|26%|	26%|
+|1 a 3	|44%|	70%|
+|4 a 5	|7%|	77%|
+|mais de 5|	23%|	100%|
  
 Ou seja:
-	26% dos bairros foram previstos na posição correta do ranking (Distância 0)
-	70% dos bairros tem distância de até 3 posições em relação ao ranking real
-	77% dos bairros tem distância de até 5 posições em relação ao ranking real 
+   - para 26% dos bairros o modelo previu a posição exata do ranking (Distância 0)
+   - para 70% dos bairros o modelo previu a posição no ranking com distância de até 3 posições em relação ao ranking real
+   - para 77% dos bairros o modelo previu a posição no ranking com distância de até 5 posições em relação ao ranking real 
 
-Se considerarmos somente os 5 bairros com maior probabilidade real de originar transportes, a distribuição por faixas de distância é a apresentada na Tabela 25. 
 
-Tabela 25- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 5 Primeiros Bairros do Ranking (Horário "Comercial")
+Se considerarmos somente os 5 bairros com maior probabilidade real de originar transportes, a distribuição por faixas de distância é a apresentada abaixo. 
+
+|Faixa de Distâncias	|% Faixa	|% Acumulado|
+|:---|---:|---:|
+|0	|39%	|39%|
+|1 a 3	|45%	|84%|
+|4 a 5	|2%	|86%|
+|mais de 5|	14%|	100%|
  
 Ou seja:
-	39% dos bairros foram previstos na posição correta do ranking (Distância 0)
-	84% dos bairros tem distância de até 3 posições em relação ao ranking real
-	86% dos bairros tem distância de até 5 posições em relação ao ranking real 
+   - para 39% dos bairros o modelo previu a posição exata do ranking (Distância 0)
+   - para 84% dos bairros o modelo previu a posição no ranking com distância de até 3 posições em relação ao ranking real
+   - para 86% dos bairros o modelo previu a posição no ranking com distância de até 5 posições em relação ao ranking real 
 
-Analisando um ranking maior, ou seja, os 20 bairros com maior probabilidade real de originar transportes, observamos também bons resultados quanto a distância em relação ao ranking estimado, como demonstrado na Tabela 26. 
-Tabela 26- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 20 Primeiros Bairros do Ranking (Horário "Comercial")
+Analisando um ranking maior, ou seja, os 20 bairros com maior probabilidade real de originar transportes, observamos também bons resultados quanto a distância em relação ao ranking estimado, como demonstrado na Tabela a seguir. 
+
+|Faixa de Distâncias	|% Faixa	|% Acumulado|
+|:---|---:|---:|
+|0|	15%|	15%|
+|1 a 3|	33%|	47%|
+|4 a 5|	10%|	58%|
+|mais de 5|	42%|	100%|
  
 Ou seja:
-	58% dos bairros tem distância de até 5 posições em relação ao ranking real 
+   - para 58% dos bairros o modelo previu a posição no ranking com distância de até 5 posições em relação ao ranking real 
 
 
+## CONCLUSÕES E TRABALHOS FUTUROS
+
+O objetivo deste trabalho foi criar modelo preditivo capaz de indicar os bairros com maior probabilidade de demandarem transportes, a cada hora, de modo a orientar o posicionamento dos transportadores por aplicativo.
+Conforme demonstrado na seção 4.2 os resultados foram satisfatórios. Já a seção 4.3 demonstra a proximidade do “ranking” de principais bairros demandadores de transporte e o “ranking” estimado pelo modelo. Entendo, portanto, que os objetivos do trabalho foram cumpridos.
+Em trabalhos futuros as seguintes oportunidades de melhoria poderiam ser exploradas visando aprimoramento dos modelos e de seus resultados:
+1.	Período da Base de Dados de Transportes
+A base de transportes dispõe de informações do mês de janeiro/2020 apenas. Os modelos preditivos foram treinados a partir de simulações com essas bases.  Assim, entendo que os modelos em questão são capazes de efetuar previsões referentes a janeiro/2020. Não é possível afirmar que esse modelo é adequado para efetuar previsões de outros meses, ou mesmo que será adequado para efetuar previsões em relação a meses de janeiro de outros anos, como por exemplo, janeiro/2021.
+Serie interessante dispor de base de pelo menos 2 anos de transportes realizados de modo a viabilizar que o modelo possa inferir:
+•	O comportamento de outros meses do ano. Cada mês pode ter sazonalidades específicas. Sem dispor de informações de outros meses para treinamento do modelo, não podemos afirmar que o mesmo estaria capaz de efetuar previsões de todos os meses do ano
+•	O padrão de comportamento de um mês ao longo dos anos. Importante que o modelo disponha de informações de mais de um mês de janeiro. Somente assim poderíamos avaliar se o modelo estaria habilitado a prever os meses de janeiro independente do ano em questão. O mesmo vale para os demais meses do ano
+•	Sazonalidades específicas tais como o comportamento do modelo em feriados, festividades e eventos locais, dia das mães, dia dos pais, dia dos namorados etc.
+2.	Padronização de Nomes de Bairros
+A oportunidade de padronização informada na seção 3.2.3 foi identificada quando as simulações para a cidade de Fortaleza foram executadas. Há oportunidade semelhante para as demais cidades selecionadas para treinamento. Cabe avaliar se resultados melhores poderiam ser obtidos com a aplicação do mesmo tipo de padronização nas demais cidades. 
+3.	Agrupamento de Bairros por Regiões
+A quantidade de bairros nas cidades eleitas, bem como, nas cidades em geral da base de transportes é muito grande, superando em pouco a quantidade de variáveis preditoras do modelo. 
+Fortaleza possui 251 bairros contra 314 variáveis preditoras, após criação das Dummy Variables. 
+Patos de Minas possui 118 bairros na base contra 176 variáveis preditoras, após criação das Dummy Variables. 
+Petrolina possui 108 bairros na base contra 160 variáveis preditoras, após criação das Dummy Variables. 
+A baixa granularidade dos bairros torna o modelo menos assertivo. Ao mesmo tempo, tal nível de detalhe pode ser desnecessário para os objetivos do negócio.
+Em trabalhos futuros seria recomendável o estudo das zonas e áreas das cidades de modo a agrupar os bairros por zonas (Norte, Sul, Leste, Oeste, Centro) ou áreas (área Portuária, Universitária, Industrial, Comercial, Residencial etc). A base de treino passaria a dispor dessa informação e o modelo seria treinado para prever a probabilidade por Região da cidade e não bairro a bairro
+4.	Correlação com outros fatores externos (Condições Climáticas)
+Fatores externos, tais como, as condições climáticas, talvez afetem a probabilidade de bairros ou regiões originarem transportes. É esperado, por exemplo, que em dias de chuva, ou de baixa temperatura, haja menos demandas de transportes envolvendo regiões praianas.
+Seria interessante, portanto, em trabalhos futuros, incluir informações das condições climáticas como variáveis preditoras na base de treino e teste, bem como outras informações pertinentes.
+5.	COVID-19
+A base de dados utilizada para treino dos modelos é de janeiro/2020, antes do início do isolamento social em geral no Brasil. Após 6 meses do início do isolamento, várias medidas de flexibilização já foram adotadas, no entanto paradigmas relacionados a ineficiência e ineficácia do home-office e ensino a distância foram quebrados. Costumes foram alterados com as pessoas fazendo mais uso de serviços de “delivery”, compras pela internet e outros. Áreas das cidades antes ocupadas principalmente por escritórios comerciais permanecem com pouca circulação de pessoas mesmo com a flexibilização do isolamento. Por tudo isso é possível que o perfil de probabilidades de regiões das cidades originarem transportes seja diferente agora do que era antes do início do isolamento. 
+Trabalhos futuros devem levar em consideração também, dados recentes, visando o aprendizado pelos modelos das probabilidades após o evento do isolamento, do COVID-19 e dos novos costumes da população. 
 
