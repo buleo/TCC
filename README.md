@@ -117,7 +117,7 @@ Já o indicador MAPE, por representar a distância percentual entre o valor prev
 
 Foram realizadas simulações para as cidades de Fortaleza, Patos de Minas e Petrolina. Os melhores resultados foram obtidos para Fortaleza e estão sumarizados nessa seção. A relação completa de resultados de Fortaleza, bem como, os resultados das demais cidades pode ser obtida diretamente na [monografia](https://github.com/buleo/TCCTeste/blob/main/BI-Master-Monografia-final%20-FMBB.pdf)
 
-### Fortaleza - Melhores Resultados
+### Melhores Resultados - Fortaleza
 
 A tabela abaixo apresenta os parâmetros da simulação na qual foram obtidos os melhores resultados utilizando o Otimizador Nadam, na cidade de Fortaleza, considerando transportes iniciados em qualquer hora do dia. Apresenta, também, os resultados dos indicadores de performance obtidos nessa simulação. 
 
@@ -158,24 +158,62 @@ O gráfico abaixo apresenta, para cada elemento da base de teste, a distância e
 ![ResultadoTodosOsHorarios](https://github.com/buleo/TCCTeste/blob/main/NadamFortalezaHorarioComercial-Grafico.png)
 
 
-### Fortaleza - Análise do “Ranking” de Bairros com Maior Probabilidade de Demandar Transporte (Real x Estimado)
+### Análise do “Ranking” de Bairros com Maior Probabilidade de Demandar Transporte (Real x Estimado) - Fortaleza
 
 Os melhores modelos simulados apresentaram MAPE de 31,68%. Ou seja, as probabilidades estimadas distam, em média, da ordem de 31,68% das probabilidades reais. Independentemente dessa distância, a questão que cabe ser respondida para indicar a utilidade dos modelos é: as probabilidades previstas são capazes de indicar os bairros com maior probabilidade de originar transportes, em linha com o “ranking real” de bairros com maior probabilidade de originar transportes?
-Para responder essa pergunta os bairros foram classificados em ordem decrescente de probabilidade real e prevista, na base de teste, para cada dia e hora cheia. Foi estabelecido o “ranking” para cada dia e hora cheia, de modo que o bairro com maior probabilidade recebeu o número 1 (primeiro), o bairro com segunda maior probabilidade recebeu o número 2 (segundo) e assim por diante. 
-De modo a ilustrar o realizado, a Tabela 18 apresenta, como exemplo, o “ranking” para Fortaleza no dia 15 para transportes iniciados na faixa de 7 horas da manhã para as probabilidades reais da base de testes.
-Tabela 18- Ordem (“Ranking”) dos Bairros com maior Probabilidade (real) de Solicitarem Transporte em Fortaleza, em 15/Janeiro às 7:00hs
+
+Para responder essa pergunta os bairros foram classificados em ordem decrescente de probabilidade real e prevista, na base de teste, para cada dia e hora cheia. Foi estabelecido o “ranking” para cada dia e hora cheia, de modo que o bairro com maior probabilidade recebeu o número 1 (primeiro), o bairro com segunda maior probabilidade recebeu o número 2 (segundo) e assim por diante. A Tabela abaixo, apresenta, como exemplo, o “ranking” para Fortaleza no dia 15 para transportes iniciados na faixa de 7 horas da manhã para as probabilidades **reais** da base de testes.
+
+|nome da cidade de partida |	dia|	dia da semana|	hora|	bairro de partida|	Probabilidade REAL (%)| Ranking|
+|:---:|:---:|:---:|:---:|:---:|---:|---:|
+|Fortaleza|	15	|4	|7	|Aldeota	|13,442623 |			1 |
+|Fortaleza|	15	|4	|7	|Conjunto Prefeito Jose Walter|	8,5245902|	2 |
+|Fortaleza|	15	|4	|7	|Meireles	|7,5409836|			3 |
+|Fortaleza|	15	|4	|7	|Bairro de Fatima|	6,557377|		4 |
+|Fortaleza|	15	|4	|7	|Centro	|5,2459016|				5 |	
+|Fortaleza|	15	|4	|7	|Mondubim|	4,2622951|			6 |
+|Fortaleza|	15	|4	|7	|Dionisio Torres	|3,2786885|		7 |
+|Fortaleza|	15	|4	|7	|Joaquim Tavora	|3,2786885|			8 |
+|Fortaleza|	15	|4	|7	|Papicu	|2,6229508|				9 |
+|Fortaleza|	15	|4	|7	|Coco	|2,295082|				10 |
+
  
 
-Já a Tabela 19 apresenta, como exemplo, o “ranking” para Fortaleza no dia 15 para transportes iniciados na faixa de 7 horas da manhã para as probabilidades estimadas pelo modelo para a base de testes.
-Tabela 19- Ordem (“Ranking”) dos Bairros com maior Probabilidade (estimada) de Solicitarem Transporte em Fortaleza, em 15/Janeiro às 7:00hs
- 
+Já a Tabela seguinte apresenta, como exemplo, o “ranking” para Fortaleza no dia 15 para transportes iniciados na faixa de 7 horas da manhã para as probabilidades **estimadas** pelo modelo para a base de testes.
+
+|nome da cidade de partida |	dia|	dia da semana|	hora|	bairro de partida|	Probabilidade ESTIMADA (%)| Ranking|
+|:---:|:---:|:---:|:---:|:---:|---:|---:|
+|Fortaleza|	15|	4|	7|	Aldeota	|10,51550198|	1|
+|Fortaleza|	15|	4|	7|	Conjunto Prefeito Jose Walter|	8,172930717|	2|
+|Fortaleza|	15|	4|	7|	Meireles|	7,201272488	|3|
+|Fortaleza|	15|	4|	7|	Centro	|4,353507996	|4|
+|Fortaleza|	15|	4|	7|	Bairro de Fatima|	4,114582539|	5|
+|Fortaleza|	15|	4|	7|	Joaquim Tavora|	2,678854227	|6|
+|Fortaleza|	15|	4|	7|	Mondubim|	2,312119007	|7|
+|Fortaleza|	15|	4|	7|	Coco	|2,051606655	|8|
+|Fortaleza|	15|	4|	7|	Papicu	|1,704099059	|9|
+|Fortaleza|	15|	4|	7|	Dionisio Torres	|1,627932549|	10|
+
 
 Em seguida, foi realizada a correspondência dos “rankings” associados a probabilidade real e a probabilidade estimada para cada bairro, dia e horário, criando-se o indicador de “Distância” correspondendo a fórmula abaixo:
 
-Distância= |〖Ranking〗_real-〖Ranking〗_estimada |
+				Distância= | Ranking(_real_) - Ranking(_estimado_) |
 
-O resultado da criação do indicador de “Distância” está ilustrado na Tabela 20, a qual apresenta o resultado desse indicador para Fortaleza no dia 15 para transportes iniciados na faixa de 7 horas da manhã.
-Tabela 20- Distância entre Ranking Real e Estimado dos Bairros com maior Probabilidade  de Solicitarem Transporte em Fortaleza, em 15/Janeiro às 7:00hs
+O cálculo do indicador de **“Distância”** está ilustrado na Tabela a seguir, a qual apresenta o resultado desse indicador para Fortaleza no dia 15 para transportes iniciados na faixa de 7 horas da manhã.
+
+|nome da cidade de partida |	dia|	dia da semana|	hora|	bairro de partida|	 Ranking **REAL**|	 Ranking **ESTIMADO**| 	  **DISTÂNCIA**|
+|:---:|:---:|:---:|:---:|:---:|---:|---:|---:|
+|Fortaleza	|15	|4	|7	|Aldeota	|1|	1|	0|
+|Fortaleza	|15	|4	|7	|Conjunto Prefeito Jose Walter|	2|	2|	0|
+|Fortaleza	|15	|4	|7	|Meireles	|3	|3|	0|
+|Fortaleza	|15	|4	|7	|Bairro de Fatima|	|4	|5|	1|
+|Fortaleza	|15	|4	|7	|Centro	|5	|4|	1|
+|Fortaleza	|15	|4	|7	|Mondubim	|6	|7|	1|
+|Fortaleza	|15	|4	|7	|Dionisio Torres|	7	|10|	3|
+|Fortaleza	|15	|4	|7	|Joaquim Tavora|	8|	6|	2|
+|Fortaleza	|15	|4	|7	|Papicu	|9	|9|	0|
+|Fortaleza	|15	|4	|7	|Coco|	10	|8|	2|
+
  
 Como podemos observar na Tabela 20, para o bairro Dionisio Torres, a Distância calculada foi 3 pois esse bairro tem a 7ª maior probabilidade de originar transportes na base real (ranking 7) enquanto que, na probabilidade estimada, foi a 10ª maior (ranking 10). Já para os bairros Aldeota, Conjunto Prefeito José Walter, Meireles e Papicu, a Distância foi 0 pois esses bairros tiveram o mesmo ranking para probabilidades reais e probabilidades estimadas de originarem transportes.
 A análise dessas distâncias e o resultado consolidado encontra-se detalhado nas seções a seguir.
