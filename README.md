@@ -315,7 +315,7 @@ Na [seção de análise do indicador de Distância do ranking](https://github.co
 
 Em trabalhos futuros as seguintes oportunidades de melhoria poderiam ser exploradas visando aprimoramento dos modelos e de seus resultados:
 
-1.	Período da Base de Dados de Transportes
+**1.	Período da Base de Dados de Transportes**
 
   A base de transportes dispõe de informações do mês de janeiro/2020 apenas. Os modelos preditivos foram treinados a partir de simulações com essas bases.  Assim, entendo que os modelos em questão são capazes de efetuar previsões referentes a janeiro/2020. Não é possível afirmar que esse modelo é adequado para efetuar previsões de outros meses, ou mesmo que será adequado para efetuar previsões em relação a meses de janeiro de outros anos, como por exemplo, janeiro/2021.
 Seria interessante dispor de base de pelo menos 2 anos de transportes realizados de modo a viabilizar que o modelo possa inferir:
@@ -323,7 +323,8 @@ Seria interessante dispor de base de pelo menos 2 anos de transportes realizados
   - O padrão de comportamento de um mês ao longo dos anos. Importante que o modelo disponha de informações de mais de um mês de janeiro. Somente assim poderíamos avaliar se o modelo estaria habilitado a prever os meses de janeiro independente do ano em questão. O mesmo vale para os demais meses do ano
   - Sazonalidades específicas tais como o comportamento do modelo em feriados, festividades e eventos locais, dia das mães, dia dos pais, dia dos namorados etc.
   
-2.	Agrupamento de Bairros por Regiões
+**2.	Agrupamento de Bairros por Regiões**
+
   A quantidade de bairros nas cidades eleitas, bem como, nas cidades em geral da base de transportes é muito grande, superando em pouco a quantidade de variáveis preditoras do modelo. 
   Fortaleza possui 251 bairros contra 314 variáveis preditoras utilizadas no modelo. 
   Patos de Minas possui 118 bairros na base contra 176 variáveis preditoras utilizadas no modelo. 
@@ -332,11 +333,13 @@ Seria interessante dispor de base de pelo menos 2 anos de transportes realizados
   A baixa granularidade dos bairros torna o modelo menos assertivo. Ao mesmo tempo, tal nível de detalhe pode ser desnecessário para os objetivos do negócio.
   Em trabalhos futuros seria recomendável o estudo das zonas e áreas das cidades de modo a agrupar os bairros por zonas (Norte, Sul, Leste, Oeste, Centro) ou áreas (área Portuária, Universitária, Industrial, Comercial, Residencial etc). A base de treino passaria a dispor dessa informação e o modelo seria treinado para prever a probabilidade por Região da cidade e não bairro a bairro
 
-3.	Correlação com outros fatores externos (Condições Climáticas)
+**3.	Correlação com outros fatores externos (Condições Climáticas)**
+
   Fatores externos, tais como, as condições climáticas, talvez afetem a probabilidade de bairros ou regiões originarem transportes. É esperado, por exemplo, que em dias de chuva, ou de baixa temperatura, haja menos demandas de transportes envolvendo regiões praianas.
 Seria interessante, portanto, em trabalhos futuros, incluir informações das condições climáticas como variáveis preditoras na base de treino e teste, bem como outras informações pertinentes.
 
-4.	COVID-19
+**4.	COVID-19**
+
   A base de dados utilizada para treino dos modelos é de janeiro/2020, antes do início do isolamento social em geral no Brasil. Após 6 meses do início do isolamento, várias medidas de flexibilização já foram adotadas, no entanto paradigmas relacionados a ineficiência e ineficácia do home-office e ensino a distância foram quebrados. Costumes foram alterados com as pessoas fazendo mais uso de serviços de “delivery”, compras pela internet e outros. Áreas das cidades antes ocupadas principalmente por escritórios comerciais permanecem com pouca circulação de pessoas mesmo com a flexibilização do isolamento. Por tudo isso é possível que o perfil de probabilidades de regiões das cidades originarem transportes seja diferente agora do que era antes do início do isolamento. 
   Trabalhos futuros devem levar em consideração também, dados recentes, visando o aprendizado pelos modelos das probabilidades após o evento do isolamento, do COVID-19 e dos novos costumes da população. 
 
