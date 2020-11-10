@@ -220,7 +220,7 @@ Analisando a tabela acima observamos que:
 
 ### Indicador de Distância entre o “Ranking” Real e Estimado de Bairros com Maior Probabilidade de Demandar Transporte - Fortaleza
 
-Para a simulação com o otimizador Nadam, todas as horas do dia, descrito na seção 4.2.2.1, a distribuição por faixas de distância referente aos 10 Bairros com maior probabilidade real de originar transportes em relação aos ranking estimado é o apresentado na Tabela 21.
+Para a simulação com o otimizador Nadam, todas as horas do dia, a distribuição por faixas de distância referente aos 10 Bairros com maior probabilidade real de originar transportes em relação aos ranking estimado é o apresentado na Tabela abaixo.
 
 Tabela 21- Distribuição das Distâncias de Ranking por Faixa para Fortaleza, Otimizador Nadam, 10 Primeiros Bairros do Ranking
  
