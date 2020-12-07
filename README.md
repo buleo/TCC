@@ -81,7 +81,7 @@ Foram realizadas, ao todo, 127 simulações desse modelo. Os parâmetros cuja co
    
 -	Quantidade de Neurônios das Camadas Escondidas
 
-   As simulações, em geral, seguiram a heurística mencionada na seção 3.3.4 da [monografia](https://github.com/buleo/TCCTeste/blob/main/BI-Master-Monografia-final%20-FMBB.pdf) quanto a quantidade de neurônios das camadas escondidas.
+   As simulações, em geral, seguiram a heurística mencionada na seção 3.3.4 da [monografia](https://github.com/buleo/TCC/blob/main/BI-Master-Monografia-final%20-FMBB%20vr%20Leonardo-RevBuleoB.pdf) quanto a quantidade de neurônios das camadas escondidas.
    
 -	Otimizador
 
@@ -115,7 +115,7 @@ Já o indicador MAPE, por representar a distância percentual entre o valor prev
 
 ## RESULTADOS
 
-Foram realizadas simulações para as cidades de Fortaleza, Patos de Minas e Petrolina. Os melhores resultados foram obtidos para Fortaleza e estão sumarizados nessa seção. A relação completa de resultados de Fortaleza, bem como, os resultados das demais cidades pode ser obtida diretamente na [monografia](https://github.com/buleo/TCCTeste/blob/main/BI-Master-Monografia-final%20-FMBB.pdf)
+Foram realizadas simulações para as cidades de Fortaleza, Patos de Minas e Petrolina. Os melhores resultados foram obtidos para Fortaleza e estão sumarizados nessa seção. A relação completa de resultados de Fortaleza, bem como, os resultados das demais cidades pode ser obtida diretamente na [monografia](https://github.com/buleo/TCC/blob/main/BI-Master-Monografia-final%20-FMBB%20vr%20Leonardo-RevBuleoB.pdf)
 
 ### Melhores Resultados - Fortaleza
 
