@@ -68,7 +68,7 @@ Vários otimizadores foram utilizados nas simulações sendo que os melhores res
   - SGD - Otimizador de Gradiente descendente com Momentum   
   - NAdam - Otimizador que implementa o algoritmo Adam conjugado com o momentum Nesterov
 
-Clique [aqui](https://github.com/buleo/TCCTeste/blob/main/TCC_Gaudium_SemanaTeste_Limpo.ipynb) para acessar o código completo do programa em [Jupiter Notebook](https://jupyter.org/). 
+Clique [aqui](https://github.com/buleo/TCCTeste/blob/main/TCC_SemanaTeste_Limpo.ipynb) para acessar o código completo do programa em [Jupiter Notebook](https://jupyter.org/). 
 
 
 ## SIMULAÇÕES
